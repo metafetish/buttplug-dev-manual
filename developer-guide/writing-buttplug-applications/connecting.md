@@ -25,6 +25,10 @@ basic connect here
 ```
 :::
 
+::: tab Rust id="rust-connecting"
+<<< lang=rust @/examples/rust/src/bin/connection.rs
+:::
+
 ::::
 
 ## Client/Server Compatibility
