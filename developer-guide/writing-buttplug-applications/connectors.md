@@ -43,6 +43,8 @@ embedded example here
 ```
 :::
 
+::: tab Rust id="rust-embedded"
+<<< lang=rust @/examples/rust/src/bin/embedded_connector.rs
 ::::
 
 ## External Servers and Connectors
