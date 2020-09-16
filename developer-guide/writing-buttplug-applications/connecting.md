@@ -69,6 +69,12 @@ ping example here
 ```
 :::
 
+::: tab Rust id="rust-ping"
+```rust
+ping example here
+```
+:::
+
 ::::
 
 ## What to Expect on Successful Connect
