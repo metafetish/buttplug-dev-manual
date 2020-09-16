@@ -11,12 +11,11 @@ async fn wait_for_input() {
 }
 
 #[async_std::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     // Usual embedded connector setup. We'll assume the server found all
     // of the subtype managers for us (the default features include all of them).
     let (client, events) = ButtplugClient::connect_in_process("Example Client", 0)
-        .await
-        .expect("couldn't connect to embedded server");
+        .await?;
 
     // Set up our DeviceAdded/DeviceRemoved event handlers before connecting.
     let events = events.inspect(|event| match event {
@@ -42,12 +41,12 @@ async fn main() {
 
     // Now we can start scanning for devices, and any time a device is
     // found, we should see the device name printed out.
-    client.start_scanning().await.expect("couldn't start scanning");
+    client.start_scanning().await?;
     wait_for_input().await;
 
     // Some Subtype Managers will scan until we still them to stop, so
     // let's stop them now.
-    client.stop_scanning().await.expect("couldn't stop scanning");
+    client.stop_scanning().await?;
     wait_for_input().await;
 
     // Since we've scanned, the client holds information about devices it
@@ -60,5 +59,7 @@ async fn main() {
     wait_for_input().await;
 
     // And now we disconnect as usual.
-    client.disconnect().await.expect("couldn't disconnect");
+    client.disconnect().await?;
+
+    Ok(())
 }

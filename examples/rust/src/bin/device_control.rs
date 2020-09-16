@@ -14,13 +14,12 @@ async fn wait_for_input() {
 }
 
 #[async_std::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     let connector = ButtplugInProcessClientConnector::new("Example Server", 0);
     let server = connector.server_ref();
-    server.add_test_comm_manager().expect("Couldn't init test device");
+    server.add_test_comm_manager()?;
     let (client, events) = ButtplugClient::connect("Example Client", connector)
-        .await
-        .expect("couldn't connect to embedded server");
+        .await?;
 
     // For this example, we'll use the Test device. This is
     // included in Buttplug Rust >= v0.1.0. It basically emulates how a
@@ -29,16 +28,15 @@ async fn main() {
     // as a way to test connection and setup UI without having to use
     // actual hardware.
     let (test_device, test_device_internal) = new_bluetoothle_test_device("Test Device")
-        .await
-        .expect("Couldn't create test device");
+        .await?;
 
     println!("Connected!");
 
     // You usually shouldn't run Start/Stop scanning back-to-back like
     // this, but with TestDevice we know our device will be found when we
     // call StartScanning, so we can get away with it.
-    client.start_scanning().await.expect("couldn't start scanning");
-    client.stop_scanning().await.expect("couldn't stop scanning");
+    client.start_scanning().await?;
+    client.stop_scanning().await?;
     println!("Client currently knows about these devices:");
     for device in client.devices() {
         println!("- {}", device.name);
@@ -68,8 +66,7 @@ async fn main() {
     // send the message. This version sets all of the motors on a
     // vibrating device to the same speed.
     test_client_device.vibrate(VibrateCommand::Speed(1.0))
-        .await
-        .expect("couldn't set vibrate speed");
+        .await?;
 
     // If we wanted to just set one motor on and the other off, we could
     // try this version that uses an array. It'll throw an exception if
@@ -82,13 +79,12 @@ async fn main() {
         .get(&ButtplugDeviceMessageType::VibrateCmd)
         .and_then(|attributes| attributes.feature_count);
     test_client_device.vibrate(VibrateCommand::SpeedVec(vec![1.0, 0.0]))
-        .await
-        .expect("couldn't set vibrate speed");
+        .await?;
 
     wait_for_input().await;
 
     // And now we disconnect as usual.
-    client.disconnect().await.expect("couldn't disconnect");
+    client.disconnect().await?;
 
     // If we try to send a command to a device after the client has
     // disconnected, we'll get an exception thrown.
@@ -99,4 +95,6 @@ async fn main() {
         println!("{}", error);
     }
     wait_for_input().await;
+
+    Ok(())
 }

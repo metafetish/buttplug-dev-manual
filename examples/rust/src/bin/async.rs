@@ -6,7 +6,7 @@ use buttplug::{
 };
 
 #[async_std::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     // In Rust, anything that will block is awaited. For instance, if
     // we're going to connect to a remote server, that might take some
     // time due to the network connection quality, or other issues. To
@@ -36,4 +36,6 @@ async fn main() {
             println!("Device {} connected", device.name);
         }
     }
+
+    Ok(())
 }

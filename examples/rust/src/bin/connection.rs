@@ -13,7 +13,7 @@ async fn wait_for_input() {
 }
 
 #[async_std::main]
-async fn main() {
+async fn main() -> anyhow::Result<()> {
     // After you've created a connector, the connection looks the same no
     // matter what, though the errors thrown may be different.
     let connector = ButtplugInProcessClientConnector::new("Example Server", 0);
@@ -43,7 +43,7 @@ async fn main() {
             // here.
             println!("Can't connect, exiting! Message: {}", error);
             wait_for_input().await;
-            return;
+            return Ok(());
         }
         Err(ButtplugClientError::ButtplugError(error)) => match error {
             ButtplugError::ButtplugHandshakeError(error) => {
@@ -51,12 +51,12 @@ async fn main() {
                 // upgrade the server we're connecting to.
                 println!("Handshake issue, exiting! Message: {}", error);
                 wait_for_input().await;
-                return;
+                return Ok(());
             }
             error => {
                 println!("Unexpected error type! {}", error);
                 wait_for_input().await;
-                return;
+                return Ok(());
             }
         }
     };
@@ -79,5 +79,7 @@ async fn main() {
     wait_for_input().await;
 
     // And now we disconnect as usual
-    client.disconnect().await.expect("failed to disconnect");
+    client.disconnect().await?;
+
+    Ok(())
 }
