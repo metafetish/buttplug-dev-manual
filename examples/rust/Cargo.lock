@@ -355,6 +355,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "buttplug-developer-guide-examples"
+version = "0.1.0"
+dependencies = [
+ "async-std",
+ "buttplug",
+]
+
+[[package]]
 name = "buttplug_derive"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1467,14 +1475,6 @@ dependencies = [
  "untrusted",
  "web-sys",
  "winapi",
-]
-
-[[package]]
-name = "rust"
-version = "0.1.0"
-dependencies = [
- "async-std",
- "buttplug",
 ]
 
 [[package]]
