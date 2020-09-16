@@ -49,4 +49,8 @@ external example here
 ```
 :::
 
+::: tab Rust id="rust-enum"
+<<< lang=rust @/examples/rust/src/bin/device_enumeration.rs
+:::
+
 ::::
