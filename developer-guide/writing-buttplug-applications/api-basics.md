@@ -32,6 +32,9 @@ For Asymmetric messages, first-class events are used, where possible (i.e. Javas
 ::: tab Twine
 <<< lang=html @/examples/twine/async-example.twee
 :::
+
+::: tab Rust
+<<< lang=rust @/examples/rust/src/bin/async.rs
 ::::
 
 ## Dealing With Errors

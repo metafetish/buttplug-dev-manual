@@ -1,0 +1,11 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["Melody Horn <melody@boringcactus.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+buttplug = "0.8.2"
+async-std = { version = "1.6.3", features = ["attributes"] }
