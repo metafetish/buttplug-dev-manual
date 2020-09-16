@@ -41,4 +41,7 @@ embedded example here
 ```
 :::
 
+::: tab Rust id="rust-embedded"
+<<< lang=rust @/examples/rust/src/bin/device_control.rs
+
 ::::
