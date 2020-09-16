@@ -36,6 +36,12 @@ Chapters involving code will have interfaces similar to the one shown here.
 ```
 :::
 
+::: tab Rust
+```rust
+// This is some Rust
+```
+:::
+
 ::::
 
 The guide tries to cover examples for all reference implementations, where possible. Due to variations in program language features, there is a good chance that while all of the examples will achieve the same goal, they may do so in very different ways. Notes about language specific requirements and implementations will be included as comments in the examples for that language.
