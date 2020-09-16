@@ -69,4 +69,8 @@ external example here
 ```
 :::
 
+::: tab Rust id="rust-external"
+<<< lang=rust @/examples/rust/src/bin/external_connector.rs
+:::
+
 ::::
