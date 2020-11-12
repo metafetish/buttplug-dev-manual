@@ -10,39 +10,49 @@ Any portion of the guide that uses the reference libraries should be considered 
 
 Chapters involving code will have interfaces similar to the one shown here.
 
-:::: tabs
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab C#
-```csharp
-// This is some C#
-```
-:::
-
-::: tab Typescript
-```typescript
-// This is some Typescript
-```
-:::
-
-::: tab Javascript
-```javascript
-// This is some Javascript
-```
-:::
-
-::: tab Twine
-```html
-<!-- This is Sugarcube Twine -->
-```
-:::
-
-::: tab Rust
 ```rust
 // This is some Rust
+let a = 1 + 2;
 ```
-:::
 
-::::
+</template>
+<template v-slot:csharp>
+
+```csharp
+// This is some C#
+var a = 1 + 2;
+```
+
+</template>
+<template v-slot:js>
+
+```js
+// This is some Javascript
+let a = 1 + 2;
+```
+
+</template>
+<template v-slot:ts>
+
+```ts
+// This is some Javascript
+let a = 1 + 2;
+```
+
+</template>
+<template v-slot:twine>
+
+```html
+<!-- This is a twine example -->
+
+<< 1 + 2 >>
+```
+
+</template>
+</CodeSwitcher>
 
 The guide tries to cover examples for all reference implementations, where possible. Due to variations in program language features, there is a good chance that while all of the examples will achieve the same goal, they may do so in very different ways. Notes about language specific requirements and implementations will be included as comments in the examples for that language.
 

@@ -21,7 +21,7 @@
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.7.1",
-    "vuepress-plugin-matomo": "^1.0.2",
-    "vuepress-plugin-tabs": "^0.3.0"
+    "vuepress-plugin-code-switcher": "^1.0.3",
+    "vuepress-plugin-matomo": "^1.0.2"
   }
 }

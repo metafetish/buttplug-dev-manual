@@ -25,52 +25,74 @@ In some implementations (this depends on language/framework capabilities), all a
 
 This process is outlined in the code example below.
 
-:::: tabs
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab C# id="csharp-embedded"
-<<< lang=csharp @/examples/csharp/EmbeddedConnectorExample/Program.cs
-:::
+<<< @/examples/rust/src/bin/embedded_connector.rs
 
-::: tab Javascript id="javascript-embedded"
+</template>
+<template v-slot:csharp>
+
+<<< @/examples/csharp/EmbeddedConnectorExample/Program.csharp
+
+</template>
+<template v-slot:js>
+
 ```js
-embedded example here
+// Need to write this example
 ```
-:::
 
-::: tab Twine id="twine-embedded"
+</template>
+<template v-slot:ts>
+
+```ts
+// Need to write this example
+```
+
+</template>
+<template v-slot:twine>
+
 ```html
-embedded example here
+<!-- Need to write this example. -->
 ```
-:::
 
-::: tab Rust id="rust-embedded"
-<<< lang=rust @/examples/rust/src/bin/embedded_connector.rs
-::::
+</template>
+</CodeSwitcher>
 
 ## External Servers and Connectors
 
 For using external servers, such as Websocket or IPC Servers, the process is much simpler. You'll need to provide the user a way to pass in the server address, then you just create the connector object using that address. Since you don't have access to the actual server object, you can assume all Device Manager setup is done by the server itself.
 
-:::: tabs
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab C# id="csharp-external"
-<<< lang=csharp @/examples/csharp/RemoteConnectorExample/Program.cs
-:::
+<<< @/examples/rust/src/bin/external_connector.rs
 
-::: tab Javascript id="javascript-external"
+</template>
+<template v-slot:csharp>
+
+<<< @/examples/csharp/RemoteConnectorExample/Program.csharp
+
+</template>
+<template v-slot:js>
+
 ```js
-external example here
+// Need to write this example
 ```
-:::
 
-::: tab Twine id="twine-external"
+</template>
+<template v-slot:ts>
+
+```ts
+// Need to write this example
+```
+
+</template>
+<template v-slot:twine>
+
 ```html
-external example here
+<!-- Need to write this example. -->
 ```
-:::
 
-::: tab Rust id="rust-external"
-<<< lang=rust @/examples/rust/src/bin/external_connector.rs
-:::
-
-::::
+</template>
+</CodeSwitcher>

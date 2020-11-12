@@ -23,25 +23,37 @@ If you can't find messages you need to control your device, check the [Buttplug 
 
 As a user of a Buttplug Client API, you should never be expected to send raw Buttplug Messages. Most Client APIs will provide message sending functions for you, usually attached to device objects or structures. If the device accepts the message type represented by the function you call, it should be sent to the device. Otherwise, it will fail.
 
-:::: tabs
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab C# id="csharp-embedded"
-<<< lang=csharp @/examples/csharp/DeviceControlExample/Program.cs
-:::
+<<< @/examples/rust/src/bin/device_control.rs
 
-::: tab Javascript id="javascript-embedded"
+</template>
+<template v-slot:csharp>
+
+<<< @/examples/csharp/DeviceControlExample/Program.csharp
+
+</template>
+<template v-slot:js>
+
 ```js
-embedded example here
+// Need to write this example
 ```
-:::
 
-::: tab Twine id="twine-embedded"
+</template>
+<template v-slot:ts>
+
+```ts
+// Need to write this example
+```
+
+</template>
+<template v-slot:twine>
+
 ```html
-embedded example here
+<!-- Need to write this example. -->
 ```
-:::
 
-::: tab Rust id="rust-embedded"
-<<< lang=rust @/examples/rust/src/bin/device_control.rs
+</template>
+</CodeSwitcher>
 
-::::

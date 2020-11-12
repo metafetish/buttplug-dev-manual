@@ -30,27 +30,37 @@ Both events may be fired at any time during a Buttplug Client/Server session. De
 ## Code Example
 
 Here's some examples of how device enumeration works in different implementations of Buttplug.
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-:::: tabs
+<<< @/examples/rust/src/bin/device_enumeration.rs
 
-::: tab C# id="csharp-enum"
-<<< lang=csharp @/examples/csharp/DeviceEnumerationExample/Program.cs
-:::
+</template>
+<template v-slot:csharp>
 
-::: tab Javascript id="js-enum"
+<<< @/examples/csharp/DeviceEnumerationExample/Program.csharp
+
+</template>
+<template v-slot:js>
+
 ```js
-external example here
+// Need to write this example
 ```
-:::
 
-::: tab Twine id="twine-enum"
+</template>
+<template v-slot:ts>
+
+```ts
+// Need to write this example
+```
+
+</template>
+<template v-slot:twine>
+
 ```html
-external example here
+<!-- Need to write this example. -->
 ```
-:::
 
-::: tab Rust id="rust-enum"
-<<< lang=rust @/examples/rust/src/bin/device_enumeration.rs
-:::
+</template>
+</CodeSwitcher>
 
-::::

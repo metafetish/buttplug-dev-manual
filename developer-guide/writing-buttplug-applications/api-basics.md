@@ -15,27 +15,33 @@ Symmetric interaction between the client and the server may be a very, very long
 
 For Asymmetric messages, first-class events are used, where possible (i.e. Javascript, C#). Otherwise, callbacks, Promises, or Futures are used depending on library capabilities. (i.e. python, C/C++, Rust).
 
-:::: tabs
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab C#
-<<< lang=csharp @/examples/csharp/AsyncExample/Program.cs
-:::
+<<< @/examples/rust/src/bin/async.rs
 
-::: tab Typescript
-<<< lang=typescript @/examples/typescript/src/async-example.ts
-:::
+</template>
+<template v-slot:csharp>
 
-::: tab Javascript
-<<< lang=javascript @/examples/javascript/async-example.js
-:::
+<<< @/examples/csharp/AsyncExample/Program.csharp
 
-::: tab Twine
-<<< lang=html @/examples/twine/async-example.twee
-:::
+</template>
+<template v-slot:js>
 
-::: tab Rust
-<<< lang=rust @/examples/rust/src/bin/async.rs
-::::
+<<< @/examples/javascript/async-example.js
+
+</template>
+<template v-slot:ts>
+
+<<< @/examples/typescript/src/async-example.ts
+
+</template>
+<template v-slot:twine>
+
+<<< @/examples/twine/async-example.twee
+
+</template>
+</CodeSwitcher>
 
 ## Dealing With Errors
 
@@ -58,30 +64,35 @@ Errors in live Buttplug sessions come in the following flavors.
 
 The above types only apply to clients that have connected to a server. Custom exceptions or errors may also be thrown by library implementations of Buttplug. For instance, a Connector may throw a custom error or exception based on the type of transport it is using. For more information, see the documentation of the specific Buttplug implementation you are using. 
 
-:::: tabs
 
-::: tab C#
-<<< lang=csharp @/examples/csharp/ExceptionExample/Program.cs
-:::
+<CodeSwitcher :languages="{rust:'Rust', csharp:'C#', ts:'TypeScript', js:'JS', twine: 'Twine (Sugarcube)'}">
+<template v-slot:rust>
 
-::: tab Typescript
-<<< lang=typescript @/examples/typescript/src/errors-example.ts
-:::
+<<< @/examples/rust/src/bin/errors.rs
 
-::: tab Javascript
-<<< lang=javascript @/examples/javascript/errors-example.js
-:::
+</template>
+<template v-slot:csharp>
 
-::: tab Twine
+<<< @/examples/csharp/ExceptionExample/Program.csharp
+
+</template>
+<template v-slot:js>
+
+<<< @/examples/javascript/errors-example.js
+
+</template>
+<template v-slot:ts>
+
+<<< @/examples/typescript/src/errors-example.ts
+
+</template>
+<template v-slot:twine>
+
 ```html
-error example
+Still need to write the Twine error handling example.
 ```
-:::
 
-::: tab Rust
-<<< lang=rust @/examples/rust/src/bin/errors.rs
-:::
-
-::::
+</template>
+</CodeSwitcher>
 
 **NOTE:** You may notice that there's no way to tell exactly what an error is from this message. You get a class, but the information itself is encoded in the message, which is not standardized. Therefore it's impossible to tell whether a device disconnected, or you just send a connected device an incorrect message. This is bad, and [will hopefully be fixed at some point in the future](https://github.com/buttplugio/buttplug/issues/70).
