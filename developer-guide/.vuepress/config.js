@@ -18,7 +18,6 @@ module.exports = {
         title: "Strategies Against Buttplug Architecture",
         collapsable: true,
         children: [
-          ""
           "/architecture/architecture.md",
           "/architecture/terms.md"
         ]
