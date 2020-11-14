@@ -1,4 +1,4 @@
-# You, Your Butt, Internet Buttplugs, And You
+# Buttplug Developer Guide
 
 A design and development guide for the Buttplug Intimate Device Control System.
 

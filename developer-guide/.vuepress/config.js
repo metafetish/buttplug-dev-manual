@@ -7,17 +7,25 @@ module.exports = {
       "/foreword.md",
       {
         title: "Flared Basics",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/intro/introduction.md",
           "/intro/how-to-read.md",
           "/intro/buttplug-ethics.md",
-          "/intro/architecture.md",
+        ]
+      },
+      {
+        title: "Strategies Against Buttplug Architecture",
+        collapsable: true,
+        children: [
+          ""
+          "/architecture/architecture.md",
+          "/architecture/terms.md"
         ]
       },
       {
         title: "Sticking Buttplug In",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/writing-buttplug-applications/intro.md",
           "/writing-buttplug-applications/api-basics.md",
@@ -30,8 +38,15 @@ module.exports = {
         ]
       },
       {
+        title: "Winning Ways For Your Buttplug Plays",
+        collapsable: true,
+        children: [
+          "/extending-buttplug-core/intro.md"
+        ]
+      },
+      {
         title: "Inflating Buttplug",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/extending-buttplug-core/intro.md"
         ]

@@ -86,24 +86,27 @@ Fuck.
 
 The preceding story actually happened.
 
-Sure, it was in the context of the Second Life virtual world, and the narrator (me) was less god and more employee, but the events happened basically as stated. Someone really wanted to be a shirt, and it couldn't happen. This was despite me (as a software engineer who, before being hired, had made real life sex toys work with Second Life) having the ability to control the world, albeit in a manner limited by software development time, project specifications, and other obstacles both gods and engineers have to deal with.
+Sure, it was in the context of the Second Life virtual world, and the narrator (me) was less god and more employee, but the events happened as stated. Someone really wanted to be a shirt, and due to the constraints of the software, it couldn't happen. This was despite me, as a software engineer (who before being hired, had made real life sex toys work with Second Life) having the ability to control the virtual world, albeit in a manner limited by software development time, project specifications, and other obstacles both gods and engineers have to deal with.
 
 There are a lot of people out there that want to be shirts, at least, in the terms of this horribly tortured metaphor. They've bought a sex toy, and the interface provided to them to control it doesn't work for them for some reason, or the content isn't to their liking. Buttplug (the software, not the sex toy genre) was created for that situation.
 
-Buttplug is nothing without interface applications. The only real function of Buttplug is make it easy for developers to get computers to talk to sex toys. The software those developers make will tell Buttplug what to say to the sex toys.
+Buttplug is nothing without interface applications. The only real function of Buttplug is make it easy for developers to get computers to talk to sex toys. The software those developers make will use Buttplug to talk to the sex toys.
 
 Interface applications are the link between users and Buttplug, establishing the functionality the user was missing. Application developers, those making the interfaces, are the shirt makers (and thus, the metaphor is dead).
 
-There are a many considerations, both non-technical and technical, that need to be kept in mind when creating an application that will interact with a sex toy. It is assumed that the sex toy will be somehow attached to a person, who will most likely be engaged in the act of sexing. This is not a situation normally covered in user interface design or software/hardware engineering textbooks. It is impossible to outline all of the relevant situational use cases. The goal of this document is to provide a framework by which decisions about specific application needs can be informed.
+There are a many considerations, both technical and social, that need to be kept in mind when creating applications that will interact with sex toys. It is assumed that the sex toy will be somehow attached to a person, who will most likely be engaged in the act of sexing. This is not a situation normally covered in user interface design or software/hardware engineering textbooks. It is impossible to outline all of the relevant situational use cases. The goal of this document is to provide a framework by which design decisions about specific application needs can be informed.
 
-There are risks in building, releasing, and using software with the kinds of contexts that are inherent in Buttplug. This document is what I've learned so far about sex toy control and interface design, and how to apply that when using or developing for Buttplug. It contains the lessons I've learned over the years, and will be the home for lessons learned in the future.
-
+Building, releasing, and using software with the kinds of contexts that are inherent in Buttplug involves risks. This document is what I've learned so far about sex toy control and interface design, and how to apply that when using or developing for Buttplug. It contains the lessons I've learned over the years so far, and will be the home for lessons learned in the future.
 
 ## Why Do I Need You To Tell Me Where My Butt Is
 
-Hi. I'm Kyle Machulis, lead architect of Buttplug. Since 2004, I've been researching and blogging about sex tech, both commercial and DIY, on [metafetish.com](https://metafetish.com). I've followed online communities, talked to hundreds of people involved in many different activities, fetishes, and interests, and built many experiments to try to figure out if/how/why technology will/won't work in situations presented to me.
+But who am I and why does my view on this information matter?
 
-The information presented here comes from over a decade of my amateur research on the sex technology field, from the engineering and user interface perspective. While I strive to provide as much help and information as possible, I am an engineer, not a sexologist, psychologist, sociologist, ethicist, or one of those other -ists that deals directly with people and people issues. It is well known that tech engineers aren't (to put it lightly) real great at "people". With that in mind, I've tried to consult with many people that are those -ists while building this software and writing this document. This project was by no means done alone, nor could it have been done alone to a quality I would've been satisfied with. The names of those brave enough to be associated with this work are listed here:
+Probably should've led with that, huh.
+
+Well, um, hi, I'm Kyle Machulis, lead architect of Buttplug. Since 2004, I've been researching and blogging about sex tech (via the now defunct [metafetish.com](https://metafetish.com)). I've followed online communities, talked to hundreds of people involved in many different activities, fetishes, and interests, and built many experiments to try to figure out if/how/why technology will/won't work in situations presented to me.
+
+The information presented here comes from over a decade of my amateur research on the sex technology field, from the engineering and user interface perspective. While I strive to provide as much help and information as possible, I am an engineer, not a sexologist, psychologist, sociologist, ethicist, or one of those other -ists that deals directly with people and people issues. It is well known that engineers may not be real great at "people" (to put it lightly). With that in mind, I've tried to consult with many people that are those aforementioned -ists while building this software and writing this document. This project was by no means done alone, nor could it have been done alone to a quality I would've been satisfied with. The names of those brave enough to be associated with this work are listed here:
 
 -   Should probably figure out who wants to be in this list.
 
