@@ -14,6 +14,7 @@ module.exports = {
           "/intro/buttplug-ethics.md",
         ]
       },
+            /*
       {
         title: "Strategies Against Buttplug Architecture",
         collapsable: true,
@@ -50,6 +51,7 @@ module.exports = {
           "/extending-buttplug-core/intro.md"
         ]
       },
+      */
     ],
     repo: 'buttplugio/buttplug-developer-guide',
   },
