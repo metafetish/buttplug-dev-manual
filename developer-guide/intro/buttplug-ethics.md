@@ -48,19 +48,31 @@ As for which CoC to use (if looking for a prewritten one), you can [check out ou
 
 Finally, you should consider if and how you'll handle contributions to your project. Regardless of whether you're running the project under your own identity, through a pseudonym, or anonymously, you shouldn't expect your contributors to all make the same choice as you did. Be ready to consider situations where someone wants to contribute but may need to use an anonymous account to do so, or may want to use their real and/or well-known identity, and how that may affect the optics and upkeep of your project.
 
-## Be Ready To Fuck Up
+## Mistakes Will Be Made
 
-Talk about mistakes that can be made, how to handle them, etc...
+Now that we've covered users and services, let's focus on you, the developer.
+
+The theme here will be as it was in the other sections: Plan ahead. Making a mistake that ends in something like data loss or crashing programs is one thing, but with sex software, there's just as likely to be social/ethical problems around technically competent implementations. How you respond to these problems affects not only your project, but the field of sex tech in general. Isn't responsibility fun?
+
+This might seem like putting way too much burden on someone making a tiny vibrator app with a new interface, but context outweights technology here. Technology as applied to sex means people will concentrate on the sex more than the technology when discussing the topic. This is why security breaches in commercial sex tech seem extra bad, even if they may impact far fewer users than a large, non-sex related technical service being hacked. As it goes with larger companies, so it will go with smaller projects. A small project that makes some sort of mistake around sex tech may still see more fire than, say, someone's reimplementation of an algorithm or database or something. Social context matters.
+
+Does this means you shouldn't develop for sex tech? Absolutely not. It just means you should treat it with more caution and planning than you might normally for less "interesting" software projects (and for everyone thinking "but most software is devoid of usage context and could be perverted for whatever reason!", yes I get it but I want to keep this section short, remember? So just go with it here.). 
+
+As you'd think your design through for your users based on the criteria from the first section of this section, think your design through for yourself too. What is it you want to be responsible for with the software you're releasing? What do and don't you want your users to be able to do with it?
+
+Note that this list is maleable. You don't have to get it right the first time, and it doesn't need to be formally stated for most smaller projects. It can grow and change as your software grows and changes, but having the stated requirements will help both you and your users in case things ever "blow up".
 
 ## The Buttplug Mission Statement
 
-For Buttplug as a project, I decided to sum this up as The Buttplug Mission Statement (written by someone far smarter than me after I said it far more verbosely and with a bunch of handwaving and probably some cursing).
+Buttplug isn't a "smaller" project though, so we do get to take on the formal statement.
+
+For Buttplug as a project, it felt best to sum up all of the information in this section as The Buttplug Mission Statement (written by someone far smarter than me after I said it far more verbosely and with a bunch of handwaving and probably some cursing).
 
 > Buttplug is committed to the safety, autonomy, and human rights of people using it as a sex technology standard, and stands in solidarity with the many intersectional rights of all individuals to be sex positive. As such, Buttplug encourages individual empowerment through self-directed education, and responsible behaviors which are also respectful of the needs and the choices available to everyone.
 
-Getting the paragraphs in this section plus a bunch of stuff not covered here squeezed into an almost-tweetable chunk means using dense wording that may sound odd for a project named "Buttplug", but this is a Load Bearing Mission Statement. It has a lot to explain and contextualize in a small space, and it does what the project needs. As your project may be more specific than "abstract hardware controller", odds are you may not need something of this manner, but it's good to at least think about what you'd say to sum up what it is you're doing and why you're doing it, before you actually have to do so.
+Getting the paragraphs in this section (plus a bunch of stuff not covered) squeezed into an almost-tweetable chunk means using dense wording that may sound odd for a project named "Buttplug", but this is a Load Bearing Mission Statement. It has a lot to explain and contextualize in a small space, and it does what the project needs. As your project may be more specific than "abstract hardware controller", odds are you may not need something of this manner, but it's good to at least think about what you'd say to sum up what it is you're doing and why you're doing it, before you actually have to do so.
 
-## Mo' Buttplugs Mo' Problems
+## Mo' Butts Mo' Problems
 
 This section, at best, should provide a framework about how to think about things as you develop your application. Your experience will be unique, and may require you to come up with your own strategies to continue development and distribution in a way that works for you and/or your community.
 
