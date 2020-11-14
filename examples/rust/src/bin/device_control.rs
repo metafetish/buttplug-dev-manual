@@ -15,19 +15,18 @@ async fn wait_for_input() {
 
 #[async_std::main]
 async fn main() -> anyhow::Result<()> {
-    let connector = ButtplugInProcessClientConnector::new("Example Server", 0);
+    let connector = ButtplugInProcessClientConnector::default();
     let server = connector.server_ref();
     server.add_test_comm_manager()?;
-    let (client, events) = ButtplugClient::connect("Example Client", connector)
+    let (client, _) = ButtplugClient::connect("Example Client", connector)
         .await?;
 
-    // For this example, we'll use the Test device. This is
-    // included in Buttplug Rust >= v0.1.0. It basically emulates how a
-    // regular device manager would work, exposing access to a Test
-    // Device which can take VibrateCmd messages. This basically exists
-    // as a way to test connection and setup UI without having to use
+    // For this example, we'll use the Test device. This is included in Buttplug
+    // Rust >= v0.1.0. It emulates how a regular device manager would work,
+    // exposing access to a Test Device which can take VibrateCmd messages. This
+    // exists as a way to test connection and setup UI without having to use
     // actual hardware.
-    let (test_device, test_device_internal) = new_bluetoothle_test_device("Test Device")
+    let (_, _) = new_bluetoothle_test_device("Test Device")
         .await?;
 
     println!("Connected!");
@@ -88,7 +87,8 @@ async fn main() -> anyhow::Result<()> {
 
     // If we try to send a command to a device after the client has
     // disconnected, we'll get an exception thrown.
-    let vibrate_result = test_client_device.vibrate(VibrateCommand::Speed(1.0))
+    let vibrate_result = 
+        test_client_device.vibrate(VibrateCommand::Speed(1.0))
         .await;
     if let Err(ButtplugClientError::ButtplugConnectorError(error)) = vibrate_result {
         println!("Tried to send after disconnection! Error: ");

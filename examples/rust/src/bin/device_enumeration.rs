@@ -4,6 +4,7 @@ use async_std::{
 };
 use buttplug::{
     client::{ButtplugClient, ButtplugClientEvent},
+    server::ButtplugServerOptions,
 };
 
 async fn wait_for_input() {
@@ -14,7 +15,7 @@ async fn wait_for_input() {
 async fn main() -> anyhow::Result<()> {
     // Usual embedded connector setup. We'll assume the server found all
     // of the subtype managers for us (the default features include all of them).
-    let (client, events) = ButtplugClient::connect_in_process("Example Client", 0)
+    let (client, events) = ButtplugClient::connect_in_process("Example Client", &ButtplugServerOptions::default())
         .await?;
 
     // Set up our DeviceAdded/DeviceRemoved event handlers before connecting.
@@ -23,7 +24,7 @@ async fn main() -> anyhow::Result<()> {
             println!("Device {} Connected!", device.name);
         }
         ButtplugClientEvent::DeviceRemoved(info) => {
-            println!("Device {} Removed!", info.device_name);
+            println!("Device {} Removed!", info.name);
         }
         _ => {}
     });

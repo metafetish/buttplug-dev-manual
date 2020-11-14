@@ -16,7 +16,7 @@ async fn wait_for_input() {
 async fn main() -> anyhow::Result<()> {
     // After you've created a connector, the connection looks the same no
     // matter what, though the errors thrown may be different.
-    let connector = ButtplugInProcessClientConnector::new("Example Server", 0);
+    let connector = ButtplugInProcessClientConnector::default();
 
     // If you'd like to try a remote network connection, comment the
     // connector line above and uncomment the one below. Note that you'll
@@ -62,16 +62,6 @@ async fn main() -> anyhow::Result<()> {
     };
 
     let (client, events) = client;
-
-    // If you don't need more information on what's going on, comment out these
-    // 5 lines. There won't be too much in this example since all we're
-    // doing is connecting.
-
-    events.for_each(|event| {
-        if let ButtplugClientEvent::Log(_level, message) = event {
-            println!("{}", message);
-        }
-    });
 
     // We're connected, yay!
     println!("Connected! Check Server for Client Name.");
