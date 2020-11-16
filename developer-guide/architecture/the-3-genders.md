@@ -1,5 +1,7 @@
 # The 3 Genders: Server, Client, Application
 
+![Buttplug Architecture Diagram](./architecture.png)
+
 ## Components
 
 Systems that use Buttplug will generally work with the following 3 components.
