@@ -10,11 +10,11 @@ Systems that use Buttplug will generally work with the following 3 components.
 
 A Buttplug Server is the piece that manages communication with hardware. This is usually via Operating System Specific libraries or APIs. It handles coordination of device connections/disconnections, mapping protocol implementations to connected hardware, and maintaining communication with the currently connected client. A few examples of jobs the server has:
 
--   The server is in charge of finding devices connected to the computer, be they bluetooth, usb, serial, firewire, parallel, barbed wire, or whatever other device communication type is supported by the server implementation in question.
--   The server contains the knowledge of how to talk to a specific toy in the way that it understands. Toy protocols are rarely shared between different brands, so the server contains many different implementations.
--   If a client is controlling a device, then for some reason disconnects, it is the server's job to stop the device until the client has reconnected and sends new control commands.
+- The server is in charge of finding devices connected to the computer, via bluetooth, usb, serial, firewire, parallel, barbed wire, or whatever other device communication type is supported by the server implementation in question.
+- The server contains the knowledge of how to talk to a specific toy in the way that it understands. Toy protocols are rarely shared between different brands, so the server contains many different implementations.
+- If a client is controlling a device, then for some reason disconnects, it is the server's job to stop the device until the client has reconnected and sends new control commands.
 
-The server may be in charge of other tasks, which we'll cover in depth in the next section. At a bare minimum, a server should handle all non-device messages in the Buttplug Protocol spec.
+The server may be in charge of other tasks, which we'll cover in depth in a later section in this chapter. 
 
 ### Buttplug Clients
 
