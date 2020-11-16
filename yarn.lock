@@ -8029,7 +8029,7 @@ vuepress-plugin-code-switcher@^1.0.3:
   dependencies:
     "@vuepress/plugin-register-components" "^1.0.0-alpha.0"
 
-vuepress-plugin-container@^2.0.2:
+vuepress-plugin-container@^2.0.2, vuepress-plugin-container@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-2.1.5.tgz#37fff05662fedbd63ffd3a5463b2592c7a7f3133"
   integrity sha512-TQrDX/v+WHOihj3jpilVnjXu9RcTm6m8tzljNJwYhxnJUW0WWQ0hFLcDTqTBwgKIFdEiSxVOmYE+bJX/sq46MA==

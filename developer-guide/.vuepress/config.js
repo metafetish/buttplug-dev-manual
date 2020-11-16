@@ -14,15 +14,19 @@ module.exports = {
           "/intro/buttplug-ethics.md",
         ]
       },
-            /*
       {
         title: "Strategies Against Buttplug Architecture",
         collapsable: true,
         children: [
-          "/architecture/architecture.md",
+          "/architecture/intro.md",
+          "/architecture/the-3-genders.md",
+          "/architecture/protocol-in-depth.md",
+          "/architecture/server-in-depth.md",
+          "/architecture/client-in-depth.md",
           "/architecture/terms.md"
         ]
       },
+      /*
       {
         title: "Sticking Buttplug In",
         collapsable: true,
@@ -64,6 +68,14 @@ module.exports = {
       }
     ],
     "@vuepress/plugin-back-to-top",
+    [
+      "vuepress-plugin-container",
+      {
+        type: 'callout',
+        before: info => `<div class="callout"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
     "code-switcher"
   ],
   evergreen: true,

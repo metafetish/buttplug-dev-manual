@@ -64,6 +64,12 @@ let a = 1 + 2;
 
 The guide tries to cover examples for implementations in all project maintained langauges. Due to variations in programming language features, there is a good chance that while all of the examples will achieve the same goal, they may do so in very different ways. Notes about language specific requirements and implementations will be included as comments in the examples for that language.
 
+::: tip What about when you see these blocks though?
+
+When you see callout blocks like this, it usually means there's some additional information or anecdote about the project or current subject. Not required info, so it's not in the normal paragraph flow, but things that might be nice to know.
+
+:::
+
 ## What's in the Guide
 
 Obviously, reading the whole guide to find out what's in it is best. A lot of work was put into writing this, and the best way to appreciate that work is to read and savor every single word.
