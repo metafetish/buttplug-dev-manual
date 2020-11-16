@@ -1,4 +1,4 @@
-# The 3 Genders
+# The 3 Genders: Server, Client, Application
 
 ## Components
 
