@@ -45,14 +45,21 @@ module.exports = {
         title: "Winning Ways For Your Buttplug Plays",
         collapsable: true,
         children: [
-          "/extending-buttplug-core/intro.md"
+          "/cookbook/intro.md",
+          "/cookbook/device-forwarders.md",
+          "/cookbook/stupid-connector-tricks.md",
         ]
       },
       {
         title: "Inflating Buttplug",
         collapsable: true,
         children: [
-          "/extending-buttplug-core/intro.md"
+          "/inflating-buttplug/intro.md",
+          "/inflating-buttplug/adding-device-protocols.md",
+          "/inflating-buttplug/adding-device-comm-managers.md",
+          "/inflating-buttplug/adding-new-messages.md",
+          "/inflating-buttplug/writing-new-clients.md",
+          "/inflating-buttplug/writing-new-servers.md",
         ]
       },
       */
