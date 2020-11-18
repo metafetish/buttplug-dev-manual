@@ -48,6 +48,7 @@ module.exports = {
           "/cookbook/intro.md",
           "/cookbook/device-forwarders.md",
           "/cookbook/stupid-connector-tricks.md",
+          "/cookbook/privacy-models.md"
         ]
       },
       {
