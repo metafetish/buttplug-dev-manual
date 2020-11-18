@@ -19,10 +19,10 @@ module.exports = {
         collapsable: true,
         children: [
           "/architecture/intro.md",
-          "/architecture/the-3-genders.md",
+          "/architecture/sessions-and-components.md",
           "/architecture/protocol-in-depth.md",
-          "/architecture/server-in-depth.md",
           "/architecture/client-in-depth.md",
+          "/architecture/server-in-depth.md",
           "/architecture/terms.md"
         ]
       },

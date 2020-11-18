@@ -58,6 +58,16 @@ Adding new functionality to Buttplug means adding new message, so when Buttplug 
 
 Message additions are a rather complicated process. Message addition procedure is outlined in the Inflating Buttplug section, but for now, just knowing these terms is enough so you can translate what project contributors are talking about when they discuss the spec and new messages.
 
+::: tip Can Clients and Servers of different spec versions talk to each other?
+
+Yes, in some cases.
+
+This is how backward compatibility in Buttplug systems works. If a client has an older message spec version than a server, the server should be able to accommodate the client by translating messages from/to the older version. This is also why you may want to think twice before developing your own server implementation, as trying to get these translations right is quite complicated.
+
+If the client has a newer message version than the server, then the connection will fail on handshake. This is because the server has no idea what the client may send it, and it's assumed that if its a remote server, then the user can probably update it to the latest version and fix this issue.
+
+:::
+
 ## For More Info, Visit Your Local Spec
 
 The above summary is all you really need to know about messages if you're going to build a Buttplug application. You can assume that most of the methods you'll use in the Client API for your chosen programming language are working behind the scenes to form a Buttplug message of some type and send it on to the server, then receiving messages from the server and turning them into either return values for methods, or events. But you shouldn't have to worry about the low level, and if you do, it's probably a bug.
