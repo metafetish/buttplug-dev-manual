@@ -3,12 +3,11 @@ let date = new Date().toJSON();
 module.exports = {
   themeConfig: {
     sidebar: [
-      "/",
-      "/foreword.md",
       {
         title: "Flared Basics",
         collapsable: true,
         children: [
+          "/foreword.md",
           "/intro/introduction.md",
           "/intro/how-to-read.md",
           "/intro/buttplug-ethics.md",
